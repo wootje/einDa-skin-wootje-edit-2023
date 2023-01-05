@@ -9,7 +9,7 @@
 
     <!-- titulo -->
     <div class="bcpbp-titulo" style="display:none;">
-      <h2>|LANG_TWOSTEP_AUTH|</h2>
+      <h2>Two-step authentication</h2>
     </div>
     <!-- fin titulo -->
 
@@ -92,7 +92,7 @@
 			<td class=list>|LANG_SECRET|</td>
 			<td class=list><span class=code_edit>|SPACED_SECRET|</span> &nbsp;&nbsp;&nbsp; <input type=submit value='Generate code'>
 				<br>
-				|LANG_SECRET_CODE|
+				Secret code
 			</td>
 		</tr>
 		</form>
@@ -103,7 +103,7 @@
 			<td class=list2>QR Code</td>
 			<td class=list2><img id='qr_url' src="|QR_URL|">
 							<div style='display: inline-block; vertical-align: top;'>
-								|LANG_SCAN_TO_PHONE|
+								Scan QR code with phone
 								<br>
 								<br>
 		<script type="text/javascript">
@@ -142,8 +142,8 @@
 		}
 		//-->
 		</script>
-								|LANG_CHECK_BEFORE_LOGOUT|:<br>
-								<input id=code name=code placeholder='6 digit code' maxlength=8 onchange="this.value=this.value.replace(/\s+/g, '');"> <input type=submit value='|LANG_TEST_CODE|'><br>
+								Test code before logging out:<br>
+								<input id=code name=code placeholder='6 digit code' maxlength=8 onchange="this.value=this.value.replace(/\s+/g, '');"> <input type=submit value='Test generated pin code'><br>
 								<br>
 								<span id='code_test_result'></span>
 							</div>
