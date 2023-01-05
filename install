@@ -8,7 +8,7 @@ function pause(){
 }
 
 function welcome(){
-  echo -e "Welcome to einDa-skin installer."
+  echo -e "Welcome to einDa-skin-wootje-edit-2023 installer."
 }
 
 function bar(){
@@ -20,14 +20,14 @@ function bar(){
 function login(){
   cd /usr/local/directadmin/data/templates/
   rm $login
-  wget https://raw.githubusercontent.com/smicroz/einDa-skin/master/utils/login/login.html
+  wget https://github.com/wootje/einDa-skin-wootje-edit-2023/blob/master/utils/login/login.html
 }
 
 # skin functions
 
 function end(){
   bar
-  echo "Congratulations!!, einDa-skin was installed"
+  echo "Congratulations!!, einDa-skin-wootje-edit-2023 was installed"
   bar
   echo "Now go to http://yourdomain:2222 and"
   echo "1 | Join admin account"
@@ -44,8 +44,8 @@ function joinFolder(){
 
 function install(){
   echo "Installing..."
-  git clone https://github.com/smicroz/einDa-skin.git
-  chown -R diradmin:diradmin einDa-skin/
+  git clone https://github.com/wootje/einDa-skin-wootje-edit-2023.git
+  chown -R diradmin:diradmin einDa-skin-wootje-edit-2023/
 }
 
 function update(){
@@ -63,11 +63,11 @@ bar
 
 joinFolder
 
-directory=einDa-skin
+directory=einDa-skin-wootje-edit-2023
 login=./login.html
 
 if [ -d "$directory" ]; then
-  echo "The directory einDa-skin already exists"
+  echo "The directory einDa-skin-wootje-edit-2023 already exists"
   echo -e "\x1B[31m == UPDATE == \x1B[0m"
   pause 'If you want update the skin, press [Enter] key for continue...'
   cd $directory/
