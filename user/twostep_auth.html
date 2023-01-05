@@ -50,7 +50,7 @@
 
 <!-- inicio bloque -->
 <div class="bcp-bloque">
-  <div class="bcpb-padding">
+  <div class="bcpb-padding" style="display:none;">
 
     <!-- inicio contenido bloque -->
 
@@ -76,7 +76,7 @@
     <!-- inicio contenido bloque -->
 
     <!-- titulo -->
-    <div class="bcpbp-titulo">
+    <div class="bcpbp-titulo" style="display:none;">
       <h2>|LANG_SETTINGS|</h2>
     </div>
     <!-- fin titulo -->
@@ -89,10 +89,9 @@
 		<form action='CMD_TWOSTEP_AUTH' method='POST'>
 		<input type='hidden' name="action" value="new_secret" />
 		<tr>
-			<td class=list>|LANG_SECRET|</td>
+			<td class=list>Secret code</td>
 			<td class=list><span class=code_edit>|SPACED_SECRET|</span> &nbsp;&nbsp;&nbsp; <input type=submit value='Generate code'>
 				<br>
-				Secret code
 			</td>
 		</tr>
 		</form>
@@ -103,7 +102,9 @@
 			<td class=list2>QR Code</td>
 			<td class=list2><img id='qr_url' src="|QR_URL|">
 							<div style='display: inline-block; vertical-align: top;'>
-								Scan QR code with phone
+								<div style="margin-top:20px;margin-bottom:5px;">
+									Scan QR code with phone
+								</div>
 								<br>
 								<br>
 		<script type="text/javascript">
@@ -142,8 +143,9 @@
 		}
 		//-->
 		</script>
-								Test code before logging out:<br>
-								<input id=code name=code placeholder='6 digit code' maxlength=8 onchange="this.value=this.value.replace(/\s+/g, '');"> <input type=submit value='Test generated pin code'><br>
+								<div style="margin-bottom:5px;"Test code before logging out:<br>
+								<input id=code name=code placeholder='6 digit code' maxlength=8 onchange="this.value=this.value.replace(/\s+/g, '');"> <br>
+								<input type=submit value='Test generated pin code' style="margin-top:10px;"><br>
 								<br>
 								<span id='code_test_result'></span>
 							</div>
