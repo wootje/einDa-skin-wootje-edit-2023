@@ -4,6 +4,26 @@ einDa skin to Directadmin| MIT License | http://smicroz.tumblr.com
 Agradecimientos a
 HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
+.box-items {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    border: 1px solid #fff0;
+	
+}
+
+.box-items:hover {
+	border: 1px solid #a5e1ff;
+	border-radius: 5px;
+}
+
+.bcpbp-titulo {
+    margin-bottom: 0.8em;
+}
+
+.bcpbpsl-izq a {
+    line-height: 1.8!important;
+}
+
 html,
 button,
 input,
@@ -60,8 +80,8 @@ a {
     color: #888;
 }
 a:hover {
-    color: #158c78;
-    text-decoration: none
+    color: #37ABE5;
+    text-decoration: none;
 }
 h1,
 h2,
@@ -100,7 +120,7 @@ td.message_info {
     padding: 5px
 }
 .message_info {
-    COLOR: #777
+    COLOR: #888
 }
 input {
     font-family: 'Montserrat', sans-serif;
@@ -168,9 +188,9 @@ input[type="submit"] {
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: .8em;
-    height: 2.7em;
-    padding: 0 .8em 0 .8em;
+    font-size: .9em;
+    height: 1.8em;
+    padding: 0 .4em 0 .4em;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -231,12 +251,12 @@ input[type="button"]:hover {
 .toptext {
     display: inline-block;
     border-radius: 0.5em;
-    font-size: 1.1em;
+    font-size: 1em;
     background: #37ABE5;
     color: #fff;
     text-shadow: none;
     font-weight: 700;
-    padding: .2em .5em .3em .4em;
+    padding: .1em .4em .1em .4em;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -1040,7 +1060,7 @@ span.sm-b-icon-user {
     transition: all .2s ease-in-;
     border-bottom: .2em solid #cbcbcb;
     background: #f0f0f0;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 700;
 }
 .box-da-table table tbody tr td.listtitle:hover {
@@ -1075,7 +1095,7 @@ span.sm-b-icon-user {
 .box-da-table table tbody tr:nth-child(even) {
     background: #f0f0f0
 }
-.box-da-table table tbody:nth-child(odd) {}.box-da-table table tbody tr:hover:nth-child(even) {
+.box-da-table table tbody:nth-child(odd) {}.box-da-table table tbody tr:hover:nth-child(even) tr:hover:nth-child(odd) {
     background: #a5e1ff
 }
 .box-da-table table table {
@@ -3581,7 +3601,7 @@ span.sm-b-icon-user {
     }
     body .contenedor .contenedor-izq .left-content .lc-content .lc-content--links ul li a {
         font-size: .9em;
-        color: #777;
+        color: #888;
         display: block;
         height: 3em;
         line-height: 3em;
@@ -3693,12 +3713,21 @@ span.sm-b-icon-user {
         padding: 0;
         margin: 0
     }
-    body .box-content .bc-padding .bcp-bloque .bcpb-padding .box-items {
+    body .box-content .bc-padding .bcp-bloque .bcpb-padding {
         width: 18%;
-        height: 7em;
+        height: 6em;
         display: inline-block;
         margin-right: 1%;
+		margin-top: 1em;
         padding-top: 1em;
+        padding-bottom: 1em;
+        vertical-align: top
+    }
+	.box-items {
+		width: 18%;
+        display: inline-block;
+        margin-right: 1%;
+		margin-top: 2em;
         padding-bottom: 1em;
         vertical-align: top
     }
