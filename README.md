@@ -42,3 +42,10 @@ https://github.com/wootje/einDa-skin-wootje-edit-2023/releases
 ![](https://github.com/wootje/einDa-skin-wootje-edit-2023/blob/master/utils/screens/screen1.png)
 
 ![](https://github.com/wootje/einDa-skin-wootje-edit-2023/blob/master/utils/screens/screen2.png)
+<br>
+<br>
+<br>
+<img style="display: block;-webkit-user-select:none;margin:auto;background-color:#fff0;transition: background-color 300ms;" src=https://img.shields.io/github/downloads/wootje/einDa-skin-wootje-edit-2023/total.svg>
+<br>
+<br>
+<br>
