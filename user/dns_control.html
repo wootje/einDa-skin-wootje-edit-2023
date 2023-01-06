@@ -1,3 +1,15 @@
+<style>
+	.first-input {
+		width:175px!important;
+		margin-right:10px!important;
+	}
+	input[type="text"] {
+		width:470px;
+	}
+	input[type="submit"] {
+		min-width:60px;
+	}
+</style>		
 |LF_STANDARD|
 |LF_DNS|
 |*if ptr|
@@ -5,10 +17,8 @@
 |*else|
 |?TREE=&raquo; <a class=tree href="/CMD_SHOW_DOMAIN?domain=`DOMAIN`">`DOMAIN`</a> &raquo; <a class=tree href="/CMD_DNS_CONTROL?domain=`DOMAIN`">`LANG_DNS_SETTINGS`</a>|
 |*endif|
-
 |?HELP_SECTION=`USER_HELPER`/dns.html|
 |HTM_USER_TOP|
-
 <script language="Javascript">
 <!--
 //**NOTE that this will check ALL checkboxes in the form.
@@ -32,23 +42,18 @@ function selectAllDNS()
 }
 // -->
 </script>
-
 |*if LOGIN_AS_DNSCONTROL="ON"|
 <span class="warning">|LANG_LOGIN_AS_DNS_CONTROL|</span>
 |*endif|
-
 <!-- inicio bloque -->
 <div class="bcp-bloque">
 	<div class="bcpb-padding">
-
 		<!-- inicio contenido bloque -->
-
 		<!-- titulo -->
 		<div class="bcpbp-titulo">
 			<h2>|LANG_H2_DNS|</h2>
 		</div>
 		<!-- fin titulo -->
-
 		<!-- inicio content -->
 		<div class="bcpbp-content">
 			<!-- table -->
@@ -69,186 +74,299 @@ function selectAllDNS()
 									|*if ptr_val!=""|
 									|?DOMAINFIELD=`ptr_val`|
 									|*endif|
-
 									|?FULL_MX_NAME=|
 									|?FULL_MX_VALUE=|
 									|*if HAVE_FULL_MX_RECORDS="1"|
 									|?FULL_MX_NAME=`DOMAINFIELD`.|
 									|?FULL_MX_VALUE=<input type=text name=mx_value size=18>|
 									|*endif|
-
 									|*if USERDNSCONTROL="ON"|
-
 								</table>
 			</div> <!-- fin table -->
 		</div> <!-- fin content -->
-
 		<!-- fin contenido bloque -->
-
 	</div> <!-- fin padding -->
 </div> <!-- fin bloque -->
-
-
 <!-- inicio bloque -->
 <div class="bcp-bloque">
 	<div class="bcpb-padding">
-
 		<!-- inicio contenido bloque -->
-
 		<!-- titulo -->
 		<div class="bcpbp-titulo">
 			<h2>|LANG_ADD_DOMAIN_RECS|</h2>
 		</div>
 		<!-- fin titulo -->
-
-
 		<!-- inicio content -->
 		<div class="bcpbp-content">
 			<!-- table -->
 			<div class="box-da-table">
 				<table class=list cellpadding=0 cellspacing=0>
-
-					<form action='/CMD_DNS_CONTROL' method='POST'>
-						<input type=hidden name=action value=add>
-						<input type=hidden name=domain value="|domain|">
-						<input type=hidden name=ptr_val value="|ptr_val|">
-						<input type=hidden name=type value="A">
-						<tr><td class=list2><input type=text name=name |DNS_DISABLED|></td><td class=list2 align=center>A</td><td class=list2><input type=text name=value size=26 |DNS_DISABLED|></td>
-							<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
+					<tr>
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="A">
+							<td>
+								<input type=text name=name |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list2 align=center>
+								A
+							</td>
+							<td class=list2>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=value size=26 |DNS_DISABLED|>
+							</td>
+							<td class=list2 align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED| style="min-width: 60px;">
+							</td
 						</form>
-
+					</tr>
+					<tr>
 						<form action='/CMD_DNS_CONTROL' method='POST'>
 							<input type=hidden name=action value=add>
 							<input type=hidden name=domain value="|domain|">
 							<input type=hidden name=ptr_val value="|ptr_val|">
 							<input type=hidden name=type value="NS">
-							<tr><td class=list><input type=text name=value value='|DOMAINFIELD|.' |DNS_DISABLED|></td><td class=list align=center>NS</td><td class=list><input type=text name=name size=26 |DNS_DISABLED|></td>
-								<td class=list align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-							</form>
-
-							<form action='/CMD_DNS_CONTROL' method='POST'>
-								<input type=hidden name=action value=add>
-								<input type=hidden name=domain value="|domain|">
-								<input type=hidden name=ptr_val value="|ptr_val|">
-								<input type=hidden name=type value="MX">
-								<tr><td class=list2><input type=text name=name value="|FULL_MX_NAME|" |DNS_DISABLED|></td><td class=list2 align=center>MX</td><td class=list2>
-									<select name=value |DNS_DISABLED|>
-										<option>0</option>
-										<option selected>10</option>
-										<option>20</option>
-										<option>30</option>
-										<option>40</option>
-										<option>50</option>
-										<option>60</option>
-										<option>70</option>
-										<option>80</option>
-										<option>90</option>
-									</select>
-									|FULL_MX_VALUE|
-								</td>
-								<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-							</form>
-
-							<form action='/CMD_DNS_CONTROL' method='POST'>
-								<input type=hidden name=action value=add>
-								<input type=hidden name=domain value="|domain|">
-								<input type=hidden name=ptr_val value="|ptr_val|">
-								<input type=hidden name=type value="CNAME">
-								<tr><td class=list><input type=text name=name |DNS_DISABLED|></td><td class=list align=center>CNAME</td><td class=list><input type=text name=value value='|DOMAINFIELD|.' |DNS_DISABLED| size=26></td>
-									<td class=list align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-								</form>
-
-								<form action='/CMD_DNS_CONTROL' method='POST'>
-									<input type=hidden name=action value=add>
-									<input type=hidden name=domain value="|domain|">
-									<input type=hidden name=ptr_val value="|ptr_val|">
-									<input type=hidden name=type value="PTR">
-									<tr><td class=list2><input type=text name=name |DNS_DISABLED|></td><td class=list2 align=center>PTR</td><td class=list2><input type=text name=value size=26 |DNS_DISABLED|></td>
-										<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-									</form>
-
-									<form action='/CMD_DNS_CONTROL' method='POST'>
-										<input type=hidden name=action value=add>
-										<input type=hidden name=domain value="|domain|">
-										<input type=hidden name=ptr_val value="|ptr_val|">
-										<input type=hidden name=type value="TXT">
-										<tr><td class=list><input type=text name=name |DNS_DISABLED|></td><td class=list align=center>TXT</td><td class=list><input type=text name=value size=26 |DNS_DISABLED|></td>
-											<td class=list align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-										</form>
-
-										<form action='/CMD_DNS_CONTROL' method='POST'>
-											<input type=hidden name=action value=add>
-											<input type=hidden name=domain value="|domain|">
-											<input type=hidden name=ptr_val value="|ptr_val|">
-											<input type=hidden name=type value="AAAA">
-											<tr><td class=list2><input type=text name=name |DNS_DISABLED|></td><td class=list2 align=center>AAAA</td><td class=list2><input type=text name=value size=26 |DNS_DISABLED|></td>
-												<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-											</form>
-
-											<form action='/CMD_DNS_CONTROL' method='POST'>
-												<input type=hidden name=action value=add>
-												<input type=hidden name=domain value="|domain|">
-												<input type=hidden name=ptr_val value="|ptr_val|">
-												<input type=hidden name=type value="SRV">
-												<tr><td class=list><input type=text name=name |DNS_DISABLED|></td><td class=list align=center>SRV</td><td class=list><input type=text name=value size=26 |DNS_DISABLED|></td>
-													<td class=list align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-												</form>
-												|*else|
-												|?DNS_SPF="no"|
-												|*endif|
-
-												|*if DNS_SPF="yes"|
-												<form action='/CMD_DNS_CONTROL' method='POST'>
-													<input type=hidden name=action value=add>
-													<input type=hidden name=domain value="|domain|">
-													<input type=hidden name=ptr_val value="|ptr_val|">
-													<input type=hidden name=type value="SPF">
-													<tr><td class=list2><input type=text name=name |DNS_DISABLED|></td><td class=list2 align=center>SPF</td><td class=list2><input type=text name=value size=26 |DNS_DISABLED|></td>
-														<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-													</form>
-													|*endif|
-													|*if DNS_DS="yes"|
-													<form action='/CMD_DNS_CONTROL' method='POST'>
-														<input type=hidden name=action value=add>
-														<input type=hidden name=domain value="|domain|">
-														<input type=hidden name=ptr_val value="|ptr_val|">
-														<input type=hidden name=type value="DS">
-														<tr title="|LANG_DS_ONLY_FOR_DELEGATION|"><td class=list><input type=text name=name |DNS_DISABLED| placeholder="subdomain.|DOMAINFIELD|."></td><td class=list align=center>DS</td><td class=list><input type=text name=value size=26 |DNS_DISABLED|></td>
-															<td class=list align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
-														</form>
-														|*endif|
-
-														|*if ALLOW_TTL_OVERRIDE="yes"|
-														<form action='/CMD_DNS_CONTROL' method='POST'>
-															<input type=hidden name=action value=ttl>
-															<input type=hidden name=domain value="|domain|">
-															<tr>
-																<td class=list2>|LANG_OVERRIDE_TTL_VAL|</td>
-																<td class=list2 align=center>TTL</td>
-																<td class=list2><input type=radio name=ttl_select value="custom" |TTL_CUSTOM_SELECTED|><input type=text name=ttl size=6 value="|TTL_VALUE|">&nbsp; <input type=radio name=ttl_select value="default" |TTL_DEFAULT_SELECTED|>|LANG_USE_DEFAULT|</td>
-																<td class=list2 align=center><input type=submit value="|LANG_SAVE|"></td>
-															</tr>
-														</form>
-														|*endif|
-
-													</table >
+							<td class=list2>
+								<input type=text name=value value='|DOMAINFIELD|.' |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list align=center>
+								NS
+							</td>
+							<td class=list>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=name size=26 |DNS_DISABLED|>
+							</td>
+							<td class=list align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							<td>
+						</form>
+					</tr>
+					<tr>
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="MX">
+							<td>
+								<input type=text name=name value="|FULL_MX_NAME|" |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list2 align=center>
+								MX
+							</td>
+							<td class=list2>	
+								<select name=value |DNS_DISABLED style="width:55px;"|>
+									<option>0</option>
+									<option selected>10</option>
+									<option>20</option>
+									<option>30</option>
+									<option>40</option>
+									<option>50</option>
+									<option>60</option>
+									<option>70</option>
+									<option>80</option>
+									<option>90</option>
+								</select>
+								|FULL_MX_VALUE|
+							</td>
+							<td class=list2 align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							</td>
+						</form>
+					</tr>												
+					<tr>
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="CNAME">
+							<td class=list>
+								<input type=text name=name |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list align=center>
+								CNAME
+							</td>
+							<td class=list>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=value value='|DOMAINFIELD|.' |DNS_DISABLED| size=26>
+							</td>
+							<td class=list align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							</td>
+						</form>
+					</tr>
+					<tr>			
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="PTR">
+							<td class=list2>
+								<input type=text name=name |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list2 align=center>
+								PTR
+							</td>
+							<td class=list2>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=value size=26 |DNS_DISABLED|>
+							</td>
+							<td class=list2 align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							</td>
+						</form>
+					</tr>
+					<tr>	
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="TXT">
+							<td class=list>
+								<input type=text name=name |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list align=center>
+								TXT
+							</td>
+							<td class=list>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=value size=26 |DNS_DISABLED|>
+							</td>
+							<td class=list align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							</td>
+						</form>
+					</tr>
+					<tr>	
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="AAAA">
+							<td class=list2>
+								<input type=text name=name |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list2 align=center>
+								AAAA
+							</td>
+							<td class=list2>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=value size=26 |DNS_DISABLED|>
+							</td>
+							<td class=list2 align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							</td>
+						</form>
+					</tr>
+					<tr>	
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+							<input type=hidden name=domain value="|domain|">
+							<input type=hidden name=ptr_val value="|ptr_val|">
+							<input type=hidden name=type value="SRV">
+							<td class=list>
+								<input type=text name=name |DNS_DISABLED| class="first-input">
+							</td>
+							<td class=list align=center>
+								SRV
+							</td>
+							<td class=list>
+								<input type=radio style="width:40px;opacity:0;">
+								<input type=text name=value size=26 |DNS_DISABLED|>
+							</td>
+							<td class=list align=center>
+								<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+							</td>
+						</form>
+					</tr>
+					|*else|
+					|?DNS_SPF="no"|
+					|*endif|
+					|*if DNS_SPF="yes"|
+					<tr>							
+						<form action='/CMD_DNS_CONTROL' method='POST'>
+							<input type=hidden name=action value=add>
+						<input type=hidden name=domain value="|domain|">
+						<input type=hidden name=ptr_val value="|ptr_val|">
+						<input type=hidden name=type value="SPF">
+						<td class=list2>
+							<input type=text name=name |DNS_DISABLED| class="first-input">
+						</td>
+						<td class=list2 align=center>
+							SPF
+						</td>
+						<td class=list2>
+							<input type=radio style="width:40px;opacity:0;">
+							<input type=text name=value size=26 |DNS_DISABLED|>
+						</td>
+						<td class=list2 align=center>
+							<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+						</td>
+					</form>
+				</tr>
+				|*endif|
+				|*if DNS_DS="yes"|
+				<tr title="|LANG_DS_ONLY_FOR_DELEGATION|">	
+					<form action='/CMD_DNS_CONTROL' method='POST'>
+						<input type=hidden name=action value=add>
+						<input type=hidden name=domain value="|domain|">
+						<input type=hidden name=ptr_val value="|ptr_val|">
+						<input type=hidden name=type value="DS">
+						<td class=list>
+							<input type=text name=name |DNS_DISABLED| placeholder="subdomain.|DOMAINFIELD|."class="first-input">
+						</td>
+						<td class=list align=center>
+							DS
+						</td>
+						<td class=list>
+							<input type=radio style="width:40px;opacity:0;">
+							<input type=text name=value size=26 |DNS_DISABLED|>
+						</td>
+						<td class=list align=center>
+							<input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|>
+						</td>
+					</form>
+				</tr>
+				|*endif|
+				|*if ALLOW_TTL_OVERRIDE="yes"|
+				<tr>	
+					<form action='/CMD_DNS_CONTROL' method='POST'>
+						<input type=hidden name=action value=ttl>
+						<input type=hidden name=domain value="|domain|">
+						<td class=list2 class="first-input">
+							|LANG_OVERRIDE_TTL_VAL|
+						</td>
+						<td class=list2 align=center>
+							TTL
+						</td>
+						<td class=list2>
+							<input type=radio name=ttl_select value="custom" |TTL_CUSTOM_SELECTED| style="width:40px;">
+							<input type=text name=ttl size=6 value="|TTL_VALUE|">&nbsp; 
+							<input type=radio name=ttl_select value="default" |TTL_DEFAULT_SELECTED| style="width:40px;">
+							|LANG_USE_DEFAULT|
+						</td>
+						<td class=list2 align=center>
+							<input type=submit value="|LANG_SAVE|">
+						</td>
+					</form>
+				</tr>
+				|*endif|
+			</table >
 			</div> <!-- fin table -->
 		</div> <!-- fin content -->
-
 		<!-- link footer -->
 		|*if !ptr|
 		<div class="bcpbp-link--footer">
 			<div class="bcpbplf-izq">
 				<a href="CMD_DNS_MX?domain=|DOMAIN|">|LANG_MODIFY_MX|</a>
 			</div>
-
 			<div class="bcpbplf-der">
 				test
 			</div>
 		</div>
 		|*endif|
 		<!-- fin link footer -->
-
 		<!-- inicio content -->
 		<div class="bcpbp-content">
 			<!-- table -->
@@ -256,11 +374,7 @@ function selectAllDNS()
 				|DNSSEC_TABLE|
 			</div> <!-- fin table -->
 		</div> <!-- fin content -->
-
-
 		<!-- fin contenido bloque -->
-
 	</div> <!-- fin padding -->
 </div> <!-- fin bloque -->
-
 |HTM_USER_BOTTOM|
