@@ -4,11 +4,19 @@
 		margin-right:10px!important;
 	}
 	input[type="text"] {
-		width:470px;
+		width:450px;
 	}
 	input[type="submit"] {
 		min-width:60px;
 	}
+	:focus-visible {
+		outline: solid 0px #888;
+	}
+	td.list,
+	td.list2 {
+		font-family: 'Open Sans', sans-serif!important;
+		font-size: 13px!important;
+	}	
 </style>		
 |LF_STANDARD|
 |LF_DNS|
@@ -343,7 +351,7 @@ function selectAllDNS()
 						<td class=list2>
 							<input type=radio name=ttl_select value="custom" |TTL_CUSTOM_SELECTED| style="width:40px;">
 							<input type=text name=ttl size=6 value="|TTL_VALUE|">&nbsp; 
-							<input type=radio name=ttl_select value="default" |TTL_DEFAULT_SELECTED| style="width:40px;">
+							<input type=radio name=ttl_select value="default" |TTL_DEFAULT_SELECTED| style="width:40px;margin-right:18px!important;">
 							|LANG_USE_DEFAULT|
 						</td>
 						<td class=list2 align=center>
@@ -358,8 +366,8 @@ function selectAllDNS()
 		<!-- link footer -->
 		|*if !ptr|
 		<div class="bcpbp-link--footer">
-			<div class="bcpbplf-izq">
-				<a href="CMD_DNS_MX?domain=|DOMAIN|">|LANG_MODIFY_MX|</a>
+			<div class="text-rendering">
+				<a class="button" style="margin-left: 12px!important;" href="CMD_DNS_MX?domain=|DOMAIN|">|LANG_MODIFY_MX|</a>
 			</div>
 			<div class="bcpbplf-der">
 				test
