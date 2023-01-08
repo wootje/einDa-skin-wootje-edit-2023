@@ -111,6 +111,21 @@ td {
     height: 600px!important;
 }
 
+#whitelist_toggle,
+#blacklist_toggle {
+    padding: 5px!important;
+}
+
+#whitelist_toggle,
+#blacklist_toggle:hover {
+    cursor: pointer!important;
+}
+
+input.lvemanager-icon-.lvemanager-text-format.ng-pristine.ng-valid.ng-touched {
+    width: 100%;
+    max-width: 375px;
+}
+
 html,
 button,
 input,
@@ -135,31 +150,31 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
-    padding: 0
+    padding: 0;
 }
 audio,
 canvas,
 img,
 video {
-    vertical-align: middle
+    vertical-align: middle;
 }
 fieldset {
     border: 0;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 textarea {
-    resize: vertical
+    resize: vertical;
 }
 .browsehappy {
     margin: 4px 0;
     background: #ccc;
     color: #000;
-    padding: 4px 0
+    padding: 4px 0;
 }
 ul {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 a {
     color: #666;
@@ -167,7 +182,7 @@ a {
 }
 a:hover {
     color: #666;
-    text-decoration: none
+    text-decoration: none;
 }
 h1,
 h2,
@@ -181,10 +196,10 @@ h4 {
 }
 .highlighted-bad {
     color: #cc2c00;
-    font-weight: bold
+    font-weight: bold;
 }
 .highlighted-neutral {
-    color: #e89933
+    color: #e89933;
 }
 .message {
     padding: 15px;
@@ -239,14 +254,19 @@ select {
     /*-webkit-border-radius: 1px;
     -moz-border-radius: 1px;*/
 }
+input[type="password"],
 input[type="text"] {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: #666;
     /*margin-bottom: 8px;*/
     display: inline-block;
-	min-width: 65%;
-    margin: auto;
+	/*min-width: 65%;*/
+	min-width: 130px;
+    margin-top: auto;
+	margin-bottom: auto;
+	margin-right:8px;
+	margin-left: 8px;
 	min-height: 28px;
 	vertical-align: middle;
 }
@@ -279,11 +299,13 @@ tr td.list {
     font-size: 13px!important;
 }
 
+table.list.table-highlight tbody tr td b a.listtitle,
 button#setAsCurrentBtn,
 button.b_btn.btn-clear,
 input[type="submit"],
 input[type="button"],
 button,
+.button,
 btn,
 .bcpbpsl-izq a,
 .toptext {
@@ -366,7 +388,7 @@ input[type="checkbox"] {
     font-size: 13px;
     font-weight: 400;
     color: #666;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
     /*margin-left: .5em;*/
     display: inline-block;
 }
