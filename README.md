@@ -1,10 +1,13 @@
 einDa-skin-wootje-edit-2023
 ==========
 
-The skin is ready to use in a live environment. If anyone finds a bug, please let me know.
+The skin is ready to use in a live environment for end-users. I can't test the reseller pages, because an error in the code would lock me out of my reseller account. If anyone finds a bug, please let me know.
 <br>
 <br>
 <i>Only remaining issue is 'tr' element background sometimes gray when it's not supposed to be. Solving the issue means rewriting a lot of pages, I'm not planning to do that any time some, because it's no big issue. No other bugs know to me.</i>
+<br>
+<br>
+DirectAdmin 1.645 used for testing.
 <br>
 <br>
 Contact: wootje-inbox@outlook.com
