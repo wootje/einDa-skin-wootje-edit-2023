@@ -1,7 +1,13 @@
 einDa-skin-wootje-edit-2023
 ==========
 
-wootje: The skin is ready for use. If there are any errors, please let me know! 
+The skin is ready to use in a live environment. If anyone finds a bug, please let me know.
+<br>
+<br>
+<i>Only remaining issue is 'tr' element background sometimes gray when it's not supposed to be. Solving the issue means rewriting a lot of pages, I'm not planning to do that any time some, because it's no big issue. No other bugs know to me.</i>
+<br>
+<br>
+Contact: wootje-inbox@outlook.com
 <br>
 <br>
 <br>
@@ -16,7 +22,7 @@ Instruction for install
 Download the release and upload the file via the web panel.
 <br>
 <br>
-https://github.com/wootje/einDa-skin-wootje-edit-2023/releases
+https://github.com/wootje/einDa-skin-wootje-edit-2023/releases/tag/DirectAdmin-skin-wootje-v3
 <br>
 <br>
 <br>
