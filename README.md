@@ -10,7 +10,7 @@ The skin is ready to use in a live environment for end-users. I can't test the r
 DirectAdmin 1.645 used for testing.
 <br>
 <br>
-Contact: wootje-inbox@outlook.com
+Contact: wootje-inbox [at] outlook [dot] com
 <br>
 <br>
 <br>
