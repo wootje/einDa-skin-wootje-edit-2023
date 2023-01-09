@@ -126,6 +126,19 @@ input.lvemanager-icon-.lvemanager-text-format.ng-pristine.ng-valid.ng-touched {
     max-width: 375px;
 }
 
+.bc-padding .bcp-bloque .bcpbp-navitem .box-items .item-titulo {
+    width: 112px;
+    text-align: center;
+    overflow-wrap: break-word;
+    margin-left: 0px!important;
+}
+
+.item-icono {
+    margin-left: 21px!important;
+}
+
+
+
 html,
 button,
 input,
