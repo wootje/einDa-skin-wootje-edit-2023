@@ -25,7 +25,7 @@ Instruction for install
 Download the release and upload the file via the web panel.
 <br>
 <br>
-https://github.com/wootje/einDa-skin-wootje-edit-2023/releases/tag/DirectAdmin-skin-wootje-v3
+https://github.com/wootje/einDa-skin-wootje-edit-2023/releases
 <br>
 <br>
 <br>
