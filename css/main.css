@@ -7,6 +7,9 @@ Agradecimientos a
 HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 
+html {
+	text-rendering: geometricPrecision;
+}
 
 .box-items {
 	display: inline-block;
@@ -17,7 +20,6 @@ HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
     padding-left: 16px;
     padding-right: 16px;
     border: 1px solid #fff0;
-	
 }
 
 .box-items a div {
@@ -137,6 +139,20 @@ input.lvemanager-icon-.lvemanager-text-format.ng-pristine.ng-valid.ng-touched {
     margin-left: 21px!important;
 }
 
+input:focus-visible,
+select:focus-visible,
+input[type="text"]:focus-visible,
+input[type="password"]:focus-visible,
+:focus-visible {
+	border-width: 1px!important;
+    border-style: outset!important;
+    border-color: #dbdbdb!important;
+    outline-width: 1px!important;
+	outline-style: auto!important;
+	outline-color: #dbdbdb!important;
+	padding-left: 8px!important;
+    padding-right: 8px!important;
+}
 
 
 html,
@@ -178,6 +194,8 @@ fieldset {
 }
 textarea {
     resize: vertical;
+	border-color: #dbdbdb;
+	margin-left: 8px!important;
 }
 .browsehappy {
     margin: 4px 0;
@@ -262,7 +280,7 @@ select {
 	vertical-align: middle;
     border-style: solid;
     border-width: 1px;
-    border-color: #cbcbcb;
+    border-color: #dbdbdb;
 	border-radius: 1px;
     /*-webkit-border-radius: 1px;
     -moz-border-radius: 1px;*/
@@ -312,7 +330,7 @@ tr td.list {
     font-size: 13px!important;
 }
 
-table.list.table-highlight tbody tr td b a.listtitle,
+/*table.list.table-highlight tbody tr td b a.listtitle,*/
 button#setAsCurrentBtn,
 button.b_btn.btn-clear,
 input[type="submit"],
@@ -404,6 +422,7 @@ input[type="checkbox"] {
     /*margin-bottom: 8px;*/
     /*margin-left: .5em;*/
     display: inline-block;
+	margin-left: 8px;
 }
 /*.selectclass:focus {
     -webkit-transition: all .2s ease-in-out;
@@ -1209,7 +1228,7 @@ span.sm-b-icon-user {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 13px;
-    border-bottom: 1px solid #cbcbcb;
+    border-bottom: 1px solid #dbdbdb;
     text-align: left;
     color: #000;
     letter-spacing: .013px;
@@ -1224,7 +1243,7 @@ span.sm-b-icon-user {
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-;
-    border-bottom: 4px solid #cbcbcb;
+    border-bottom: 4px solid #dbdbdb;
     background: #f0f0f0;
     font-size: 13px;
     font-weight: 700;
@@ -1247,7 +1266,7 @@ span.sm-b-icon-user {
     transition: all .2s ease-in-
 }*/
 .box-da-table table tbody tr td {
-    /*border-bottom: 1px solid #cbcbcb;*/
+    /*border-bottom: 1px solid #dbdbdb;*/
     text-align: left;
 	max-width: 790px;
 	min-width: 60px;
