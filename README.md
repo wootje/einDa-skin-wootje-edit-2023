@@ -22,7 +22,7 @@ Instruction for install
 <b>Option 1:</b>
 <br>
 <br>
-Download the release and upload the file via the web panel.
+Download the latetst release and upload the file via the web panel.
 <br>
 <br>
 https://github.com/wootje/einDa-skin-wootje-edit-2023/releases
