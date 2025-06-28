@@ -10,6 +10,11 @@ Contact: wootje-inbox [at] outlook [dot] com
 <br>
 <br>
 <br>
+<b>Buy me a cup of coffee!</b> 🙂👍 <br>
+https://urlshrt.eu/buycupofcoffee
+<br>
+<br>
+<br>
 <h2>To do:</h2>
 <br>
 1. Remove the 'tr' element background-color in some cases (need to rewrite HTML code to fix) <br>
