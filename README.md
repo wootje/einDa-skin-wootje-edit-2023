@@ -14,6 +14,9 @@ Contact: wootje-inbox [at] outlook [dot] com
 https://urlshrt.eu/buycupofcoffee
 <br>
 <br>
+<img src="https://urlshrt.eu/donateqr"></img>
+<br>
+<br>
 <br>
 <h2>To do:</h2>
 <br>
